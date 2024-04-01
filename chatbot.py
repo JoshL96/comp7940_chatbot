@@ -7,6 +7,11 @@ from ChatGPT_HKBU import HKBU_ChatGPT
 import os
 #global redis1
 global chatgpt
+import firebase_admin
+from firebase_admin import credentials
+
+cred = credentials.Certificate("path/to/serviceAccountKey.json")
+firebase_admin.initialize_app(cred)
 def main():
     # Load your token and create an Updater for your Bot
     #config = configparser.ConfigParser()
